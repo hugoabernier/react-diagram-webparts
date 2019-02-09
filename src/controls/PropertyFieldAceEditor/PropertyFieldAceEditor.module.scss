@@ -1,0 +1,37 @@
+@import "~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss";
+
+:global {
+  .ace-github {
+    .ace_gutter {
+      background-color: $ms-color-neutralLighter;
+      color: $ms-color-neutralPrimary;
+    }
+
+    .ace_content {
+      color: $ms-color-neutralPrimary;
+    }
+
+    .ace_marker-layer .ace_active-line {
+      background-color: $ms-color-neutralLight;
+    }
+  }
+
+  .ace_focus .ace_marker-layer .ace_active-line {
+    background: $ms-color-themeLighter;
+  }
+}
+
+.errorMessage {
+  font-size: 12px;
+  font-weight: 400;
+  color: $ms-color-error;
+  margin: 0;
+  padding-top: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.errorIcon {
+  font-size: 14px;
+  margin-right: 5px;
+}

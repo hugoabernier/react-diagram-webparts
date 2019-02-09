@@ -1,0 +1,27 @@
+@import "~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss";
+
+.sequence {
+  text-align: center;
+  /*
+  sequence: Applies to main SVG tag.
+title: Applied to the title of the diagram.
+actor: Applied to the actors.
+signal: Applied to the signals.
+note: Applied to all notes.
+  */
+
+  /* Overwrite the SVG text to look like Office 365 */
+  text {
+    font-family: "Segoe UI Web (West European)", Segoe UI, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue,
+      sans-serif !important;
+    color: $ms-color-neutralPrimary;
+  }
+
+  rect, path {
+    stroke: $ms-color-neutralDark;
+  }
+
+  rect {
+    fill: $ms-color-white;
+  }
+}
