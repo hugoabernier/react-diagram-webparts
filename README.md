@@ -5,7 +5,7 @@
 This solution contains (or will contain) a collection of web parts that make it easy
 to embed various types of diagrams in pages.
 
-![Sequence Diagram Web Part](./assets/sequencewebpart.gif)
+![Sequence Diagram Web Part](./assets/SequenceWebPart.gif)
 
 ## Used SharePoint Framework Version
 
