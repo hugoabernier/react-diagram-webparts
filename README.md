@@ -17,7 +17,7 @@ It uses the [js-flowchart](https://github.com/adrai/flowchart.js) syntax to quic
 
 ### Sequence diagram
 
-![Sequence Diagram Web Part](./assets/sequencewebpart.gif)
+![Sequence Diagram Web Part](./assets/SequenceWebPart.gif)
 
 The Sequence diagram web part allows you to create sequence diagrams using simple text.
 
