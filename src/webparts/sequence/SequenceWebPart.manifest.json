@@ -12,7 +12,7 @@
   "preconfiguredEntries": [{
     "groupId": "5c03119e-3074-46fd-976b-c60198311f70",
     "group": { "default": "Other" },
-    "title": { "default": "Sequence Diagram" },
+    "title": { "default": "Sequence diagram" },
     "description": { "default": "Create a UML sequence diagram using simple text" },
     "iconImageUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAA1CAYAAADs+NM3AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAEcAAABHABPT7uXAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAKKSURBVGiB7Zq9q9NQGMZ/yU0aCE4KHaq4mlE6WBf/AKub3joUXJ2KtIuu2qWiV5QiqFNBrvSCS/Fj6KCbS0mF6FCoUPAjQ+GuvbbBxqG9KmJv05NUDyE/CJT0fU6fhyQnbw8HwA976Lo+IASqqj6NwocGsL29jWVZQkba7TbValX3PE84jKZpG4VCgXK5LKTv9XoUi0U0AMuyyGazQgP1+30h3Z+k02lhD/uokTiRhCSMrCRhZCUJIyuxCqMBNBoN2u220ACO40RipNPpUKvVhLSu6wKg6Lr+2jAMfVHhZDI5qiiKp+v6cFHNeDweeJ53WcgJoKrqddM0zy363vO8w9Pp9JBhGJ8O8BCon3KAZwIeo+Q+sLusKFbPTBJGVmQLcwpYOBktQ7Yw14CPwFXAWFWsBawzgPSqgwtgAMeBe0AFuAs8jPIH3hPB//MQxxvgAQGm5iBXxgdeAVcC1IblMXB2/vkLcAd4BNwKIg56m+3NB183e8BnYItZiG+riIOG+VdsATYwFhHLFuZtGLFsU3MokjCykoSZswGcicpIFIiEUYFN4ANwO1o74VhlalaBC0AVODE/9w44FrWpv2AGKVIC1DhAH/jO7Ir8D3aZeT1yUFHQK+MDl4AnwE3g5Px8l1+91DqpAheXFa1ym/nAc+AFcB64AXjAwlWbCAnUo4m0M/uhXgKnBfRrI8zUPCVkLxU1yUtTVmIVJlZrzQrgl0olMpmMkBHHcWi1Wl9Ho5FwJ5BKpXZyuVwhn88L6V3XpV6vA+Dbtu2L0mw2fdM0Q60PpFKpnUqlIuzBtm0f8GP1zCRhZCUJIytJGFmJVRgNZjvpRBkMQu1o/MlwOKTb7Qppf/cfmz2aPwDxeobQ8xxRjAAAAABJRU5ErkJggg==",
     "properties": {

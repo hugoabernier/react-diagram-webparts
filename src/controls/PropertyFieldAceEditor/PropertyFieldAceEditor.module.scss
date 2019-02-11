@@ -2,6 +2,14 @@
 
 :global {
   .ace-github {
+    border-width: 1px;
+    border-style: solid;
+    border-color: $ms-color-neutralTertiaryAlt;
+
+    &:hover {
+      border-color: $ms-color-neutralPrimary;
+    }
+
     .ace_gutter {
       background-color: $ms-color-neutralLighter;
       color: $ms-color-neutralPrimary;
@@ -16,8 +24,40 @@
     }
   }
 
+  .ace_focus, .ace_focus:hover {
+    border-color: $ms-color-themePrimary;
+  }
+
   .ace_focus .ace_marker-layer .ace_active-line {
     background: $ms-color-themeLighter;
+  }
+
+  .ace-github .ace_print-margin {
+    width: 1px;
+    background: transparent;
+    display: none;
+  }
+
+  .ace-github .ace_keyword {
+    color: $ms-color-themePrimary;
+  }
+
+  .ace-github .ace_operator {
+    font-weight: bold;
+    color: $ms-color-themeSecondary;
+  }
+
+  .ace_lparen, .ace_rparen {
+    font-weight: bold;
+    color: $ms-color-themeTertiary;
+  }
+
+  .ace-github .ace_link {
+    text-decoration: underline;
+  }
+
+  .ms-Panel-content {
+    height: 100%;
   }
 }
 
@@ -34,4 +74,58 @@
 .errorIcon {
   font-size: 14px;
   margin-right: 5px;
+}
+
+.actionButtonsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  background-color: $ms-color-white;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.actionButtons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.actionButton {
+  height: 30px;
+  padding-bottom: 3px;
+}
+
+[dir="ltr"] .actionButton {
+  padding-left: 16px;
+}
+
+[dir="ltr"] .actionButton {
+  margin-left: 0;
+}
+
+[dir="ltr"] .actionButton {
+  margin-right: 10px;
+}
+
+[dir="ltr"] .actionButtons {
+  padding-left: 20px;
+}
+
+[dir="ltr"] .actionButtons {
+  padding-right: 11px;
+}
+
+.fullScreenButton {
+  color: inherit;
 }

@@ -1,0 +1,10 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+
+:export {
+  neutralPrimary: $ms-color-neutralPrimary;
+  white: $ms-color-white;
+}
+
+.flow {
+  color: inherit;
+}

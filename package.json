@@ -16,6 +16,7 @@
     "@microsoft/sp-lodash-subset": "1.7.1",
     "@microsoft/sp-office-ui-fabric-core": "1.7.1",
     "@microsoft/sp-webpart-base": "1.7.1",
+    "@pnp/spfx-controls-react": "^1.11.0",
     "@types/es6-promise": "0.0.33",
     "@types/react": "16.4.2",
     "@types/react-dom": "16.0.5",
@@ -24,7 +25,9 @@
     "markdown-to-jsx": "^6.9.1",
     "react": "16.3.2",
     "react-ace": "^6.3.2",
-    "react-sequence-diagram": "0.0.12"
+    "react-dom": "16.3.2",
+    "react-sequence-diagram": "0.0.12",
+    "react-simple-flowchart": "^1.2.2"
   },
   "resolutions": {
     "@types/react": "16.4.2"

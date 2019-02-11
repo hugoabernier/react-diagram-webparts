@@ -2,13 +2,16 @@ import {
   IPropertyPaneCustomFieldProps,
 } from '@microsoft/sp-webpart-base';
 
-import { AceOptions, Annotation } from 'react-ace';
+import { AceOptions } from 'react-ace';
 
 export interface IPropertyFieldAceEditorProps {
   /**
    * Options specific to the ACE code editor component
+   * See https://github.com/ajaxorg/ace/wiki/Configuring-Ace
    */
   aceOptions?: AceOptions;
+
+  customMode?: ()=>void;
 
   /**
    * Custom Field will start to validate after users stop typing for `deferredValidationTime` milliseconds.
@@ -16,6 +19,8 @@ export interface IPropertyFieldAceEditorProps {
    */
   deferredValidationTime?: number;
 
+  defaultValue?: string;
+  
   /**
   * Specify if the control needs to be disabled
   */
@@ -69,14 +74,13 @@ export interface IPropertyFieldAceEditorProps {
   /**
    * The theme you wish to use.
    *
-   * If you use the GitHub theme, we'll make it look like Office 365
    * For available themes see https://github.com/thlorenz/brace/tree/master/theme
    *
    * NOTE: Make sure to import the theme before calling this component
    * e.g.:
    * import 'brace/theme/github';
    */
-  theme: string;
+  theme?: string;
 
   /**
    * The code you wish to display in the code editor
@@ -102,6 +106,13 @@ export interface IPropertyFieldAceEditorProps {
    * method of the web part object.
    */
   onPropertyChange(propertyPath: string, oldValue: any, newValue: any): void;
+}
+
+export interface Annotation {
+  row: number;
+  column: number;
+  type: string;
+  text: string;
 }
 
 export interface IPropertyFieldAceEditorPropsInternal extends IPropertyPaneCustomFieldProps, IPropertyFieldAceEditorProps {

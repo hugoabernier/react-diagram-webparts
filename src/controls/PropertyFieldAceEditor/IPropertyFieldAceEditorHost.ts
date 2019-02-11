@@ -15,4 +15,5 @@ export interface IPropertyFieldAceEditorHostState {
   editorHeight?: string;
   errorMessage?: string;
   value: string;
+  fullScreen: boolean;
 }
