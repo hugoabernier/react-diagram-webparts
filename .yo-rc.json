@@ -10,7 +10,7 @@
   },
   "@microsoft/generator-sharepoint": {
     "framework": "react",
-    "isCreatingSolution": true,
+    "isCreatingSolution": false,
     "environment": "spo",
     "version": "1.7.1",
     "libraryName": "react-diagram-webparts",

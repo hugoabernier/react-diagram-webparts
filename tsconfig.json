@@ -22,7 +22,25 @@
       "es5",
       "dom",
       "es2015.collection"
-    ]
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@flow-components/*": [
+        "src/webparts/flow/components/*"
+      ],
+      "@sequence-components/*": [
+        "src/webparts/sequence/components/*"
+      ],
+      "@controls/*": [
+        "src/controls/*"
+      ],
+      "@common/*": [
+        "src/common/*"
+      ],
+      "@src/*": [
+        "src/*"
+      ]
+    }
   },
   "include": [
     "src/**/*.ts"

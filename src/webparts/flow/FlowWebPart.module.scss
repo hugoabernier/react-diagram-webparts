@@ -1,0 +1,27 @@
+@import "~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss";
+
+.section {
+  border-bottom: 1px solid;
+  color: $ms-color-themePrimary!important;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  padding: 14px 4px 4px;
+}
+
+.subtitle {
+  font-style: italic;
+  padding-top: 4px;
+  color: #333333;
+  word-wrap: break-word;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.note {
+  margin-left: 0;
+  border-left-width: 2px;
+  border-left-style: solid;
+  border-left-color: $ms-color-themePrimary;
+  padding-left: 4px;
+}

@@ -1,11 +1,13 @@
 import { DisplayMode } from "@microsoft/sp-core-library";
 
-export interface ISequenceProps {
-  sequenceText: string;
-  accessibleText: string;
-  accessibleTitle: string;
-  theme: string;
+export interface IFlowProps {
+  configurationJson: string;
   displayMode: DisplayMode;
+  flowText: string;
   title: string;
   onUpdateTitle: (value: string) => void;
+}
+
+export interface IFlowState {
+  elementText: string;
 }

@@ -9,10 +9,21 @@
           "manifest": "./src/webparts/sequence/SequenceWebPart.manifest.json"
         }
       ]
+    },
+    "flow-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/flow/FlowWebPart.js",
+          "manifest": "./src/webparts/flow/FlowWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
   "localizedResources": {
-    "SequenceWebPartStrings": "lib/webparts/sequence/loc/{locale}.js"
+    "SequenceWebPartStrings": "lib/webparts/sequence/loc/{locale}.js",
+    "FlowWebPartStrings": "lib/webparts/flow/loc/{locale}.js",
+    "PropertyFieldAceEditorStrings": "lib/controls/propertyfieldaceeditor/loc/{locale}.js",
+    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js"
   }
 }

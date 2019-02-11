@@ -1,8 +1,16 @@
 import * as React from 'react';
+
+// Custom styles
 import styles from './Sequence.module.scss';
+
+// Custom props
 import { ISequenceProps } from './ISequenceProps';
-import { escape } from '@microsoft/sp-lodash-subset';
+
+// Used to render sequence diagrams
 import SequenceDiagram from 'react-sequence-diagram';
+
+// PnP controls rock!
+import { WebPartTitle } from "@pnp/spfx-controls-react/lib/WebPartTitle";
 
 export default class Sequence extends React.Component<ISequenceProps, {}> {
   private _diagramElem: SequenceDiagram = undefined;
@@ -15,13 +23,15 @@ export default class Sequence extends React.Component<ISequenceProps, {}> {
     this._resizifyAndAccessibilify();
   }
 
-
   public render(): React.ReactElement<ISequenceProps> {
     const options = {
       theme: this.props.theme
     };
     return (
       <div className={styles.sequence}>
+       <WebPartTitle displayMode={this.props.displayMode}
+          title={this.props.title}
+          updateProperty={this.props.onUpdateTitle} />
         <SequenceDiagram
           ref={(el: SequenceDiagram) => this._diagramElem = el}
           input={this.props.sequenceText} options={options} onError={(error) => this._handleError(error)} />
@@ -29,10 +39,14 @@ export default class Sequence extends React.Component<ISequenceProps, {}> {
     );
   }
 
+  /**
+   * Handles errors parsing the sequence diagram text
+   */
   private _handleError = (error) => {
     console.error(error);
   }
 
+  // Resizes and adds accessible tags
   private _resizifyAndAccessibilify = () => {
     // The Sequence Diagram does not set a viewBox, which makes it really
     // hard to create an resizing SVG

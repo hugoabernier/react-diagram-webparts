@@ -39,6 +39,16 @@ participant Carl as C
 participant Bob as B
 B->C: Produces a line from Bob to Carl
 \`\`\`
+
+## For more information
+
+For more information, please visit [js-sequence-diagrams](https://bramp.github.io/js-sequence-diagrams/).
+
+## Credits
+
+[Andrew Brampton](https://github.com/bramp) for the awesome [js-sequence-diagrams](https://bramp.github.io/js-sequence-diagrams/)
+
+[Hwantae Ji](https://github.com/zfanta) for [react-sequence-diagram](https://github.com/zfanta/react-sequence-diagram)
 `,
     SequenceParsingErrorExpectingActor: "Expecting one or more actors",
     SequenceParsingErrorInvalidPlacement: "Expecting 'left of', 'right of', or 'over'",

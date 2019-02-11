@@ -1,6 +1,6 @@
 
 
-import { IParser, IParserError } from "./IParser";
+import { IParser, IParserError } from "../../parsers/IParser";
 
 import * as strings from 'SequenceWebPartStrings';
 /**
