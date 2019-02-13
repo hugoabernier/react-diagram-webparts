@@ -88,10 +88,7 @@ export default class Flow extends React.Component<IFlowProps, IFlowState> {
     // viewBox and set the width to 100%
     if (this._diagramElem) {
       try {
-        console.log("Chart element", this._diagramElem);
-        console.log("Chart element chart", this._diagramElem.chart);
         const svg: SVGElement = this._diagramElem.chart.firstElementChild;
-        console.log("SVG Element", svg);
 
         // Store the height
         const height = svg.getAttribute("height");

@@ -17,9 +17,6 @@ import { PropertyFieldAceEditor, Annotation } from '@controls/PropertyFieldAceEd
 // Import a Mode (language) for Ace
 import 'brace/mode/asciidoc';
 
-// Import a theme
-//import 'brace/theme/github';
-
 import { IParser, IParserError } from '@src/parsers';
 import { SequenceParser } from './SequenceParser';
 import { PropertyPaneMarkdownContent } from '@controls/PropertyPaneMarkdownContent';
@@ -27,7 +24,6 @@ import { PropertyPaneMarkdownContent } from '@controls/PropertyPaneMarkdownConte
 import { IMarkdownProps } from 'markdown-to-jsx';
 
 import styles from './SequenceWebPart.module.scss';
-
 
 export interface ISequenceWebPartProps {
   sequenceText: string;
@@ -200,11 +196,9 @@ export default class SequenceWebPart extends BaseClientSideWebPart<ISequenceWebP
       .replace('-->', strings.DashedArrowTo)
       .replace('-->>', strings.DashedOpenArrowTo);
 
-    console.log("Plaintext", plainText);
-    this.properties.accessibleText = plainText;
+      this.properties.accessibleText = plainText;
 
     const title: string = this._parser.parseTitle(value);
-    console.log("Title", title);
 
     this.properties.accessibleTitle = title;
   }
@@ -221,11 +215,8 @@ export default class SequenceWebPart extends BaseClientSideWebPart<ISequenceWebP
           text: result.error
         };
       });
-      console.log("Validation got errors", annotations);
       return annotations;
     }
-
-    console.log("Validaiton no errors");
 
     return undefined;
   }

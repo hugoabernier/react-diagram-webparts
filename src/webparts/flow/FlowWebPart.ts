@@ -191,9 +191,7 @@ export default class FlowWebPart extends BaseClientSideWebPart<IFlowWebPartProps
    * Validates the flowchart text
    */
   private _handleValidation = (value: string): Annotation[] => {
-    console.log("Validating");
     const parserResults: IParserError[] = this._parser.verifySyntax(value);
-    console.log("Validation results", parserResults);
 
     if (parserResults && parserResults.length > 0) {
       const annotations: Annotation[] = parserResults.map(result => {
@@ -204,11 +202,8 @@ export default class FlowWebPart extends BaseClientSideWebPart<IFlowWebPartProps
           text: result.error
         };
       });
-      console.log("Validation got errors", annotations);
       return annotations;
     }
-
-    console.log("Validation was ok");
 
     return undefined;
   }
@@ -219,14 +214,12 @@ export default class FlowWebPart extends BaseClientSideWebPart<IFlowWebPartProps
   private _handleValidateJson = (value: string): Annotation[] => {
     let annotations: Annotation[] = [];
 
-    console.log("Validating JSON");
     let opts: {} = {};
     try {
       if (value !== undefined && value !== "") {
         JSON.parse(value);
       }
     } catch (e) {
-      console.log("Error validating json", e) ;
       annotations.push({
         column: 0,
         row: 0,

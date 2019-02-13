@@ -1,0 +1,441 @@
+@import "~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss";
+
+.mermaidWebPart {
+  text-align: center;
+}
+
+:global {
+  #mermaid .label {
+    font-family: "Segoe UI Web (West European)", Segoe UI, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue,
+      sans-serif;
+    color: $ms-color-neutralPrimary;
+  }
+
+  #mermaid text {
+    font-family: "Segoe UI Web (West European)", Segoe UI, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue,
+      sans-serif !important;
+    color: $ms-color-neutralPrimary;
+  }
+
+  #mermaid .node rect,
+  #mermaid .node circle,
+  #mermaid .node ellipse,
+  #mermaid .node polygon {
+    fill: $ms-color-themeLight;
+    stroke: $ms-color-themePrimary;
+    stroke-width: 1px;
+  }
+
+  #mermaid .node.clickable {
+    cursor: pointer;
+  }
+
+  #mermaid .arrowheadPath {
+    fill: $ms-color-themeDark;
+  }
+
+  #mermaid .edgePath .path {
+    stroke: $ms-color-themeDark;
+    stroke-width: 1.5px;
+  }
+
+  #mermaid .edgeLabel {
+    background-color: $ms-color-infoBackground;
+    color: $ms-color-infoText;
+  }
+
+  #mermaid .cluster rect {
+    fill: $ms-color-themeLighter !important;
+    stroke: $ms-color-themePrimary !important;
+    stroke-width: 1px !important;
+  }
+
+  #mermaid .cluster text {
+    fill: $ms-color-neutralPrimary;
+  }
+
+  #mermaid div.mermaidTooltip {
+    position: absolute;
+    text-align: center;
+    max-width: 200px;
+    padding: 2px;
+    font-family: "Segoe UI Web (West European)", Segoe UI, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue,
+      sans-serif;
+    font-size: 12px;
+    background: $ms-color-themeLighter;
+    border: 1px solid $ms-color-themePrimary;
+    border-radius: 2px;
+    pointer-events: none;
+    z-index: 100;
+  }
+
+  #mermaid .actor {
+    stroke: $ms-color-themePrimary;
+    fill: $ms-color-themeLight;
+  }
+
+  #mermaid text.actor {
+    fill: $ms-color-black;
+    stroke: none;
+  }
+
+  #mermaid .actor-line {
+    stroke: $ms-color-neutralPrimary;
+  }
+
+  #mermaid .messageLine0 {
+    stroke-width: 1.5;
+    stroke-dasharray: "2 2";
+    stroke: $ms-color-neutralPrimary;
+  }
+
+  #mermaid .messageLine1 {
+    stroke-width: 1.5;
+    stroke-dasharray: "2 2";
+    stroke: $ms-color-neutralPrimary;
+  }
+
+  #mermaid #arrowhead {
+    fill: $ms-color-neutralPrimary;
+  }
+
+  #mermaid #crosshead path {
+    fill: $ms-color-neutralPrimary !important;
+    stroke: $ms-color-neutralPrimary !important;
+  }
+
+  #mermaid .messageText {
+    fill: $ms-color-neutralPrimary;
+    stroke: none;
+  }
+
+  #mermaid .labelBox {
+    stroke: $ms-color-themeDark;
+    fill: $ms-color-themeLight;
+  }
+
+  #mermaid .labelText {
+    fill: $ms-color-black;
+    stroke: none;
+  }
+
+  #mermaid .loopText {
+    fill: $ms-color-black;
+    stroke: none;
+  }
+
+  #mermaid .loopLine {
+    stroke-width: 2;
+    stroke-dasharray: "2 2";
+    stroke: $ms-color-themeDark;
+  }
+
+  #mermaid .note {
+    fill: #fff4ce; //$ms-color-warningBackground;
+    color: $ms-color-warningText;
+    stroke: $ms-color-warning;
+  }
+
+  #mermaid .noteText {
+    fill: $ms-color-black;
+    stroke: none;
+    font-family: "Segoe UI Web (West European)", Segoe UI, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue,
+      sans-serif;
+    font-size: 14px;
+  }
+
+  #mermaid .activation0 {
+    fill: $ms-color-neutralLighter;
+    stroke: $ms-color-neutralDark;
+  }
+
+  #mermaid .activation1 {
+    fill: $ms-color-neutralLighter;
+    stroke: $ms-color-neutralDark;
+  }
+
+  #mermaid .activation2 {
+    fill: $ms-color-neutralLighter;
+    stroke: $ms-color-neutralDark;
+  }
+
+  #mermaid .section {
+    stroke: none;
+    opacity: 0.2;
+  }
+
+  #mermaid .section0 {
+    fill: $ms-color-themePrimary;
+  }
+
+  #mermaid .section2 {
+    fill: $ms-color-themePrimary;
+  }
+
+  #mermaid .section1,
+  #mermaid .section3 {
+    fill: $ms-color-white;
+    opacity: 0.2;
+  }
+
+  #mermaid .sectionTitle0 {
+    fill: $ms-color-neutralPrimary;
+  }
+
+  #mermaid .sectionTitle1 {
+    fill: $ms-color-neutralPrimary;
+  }
+
+  #mermaid .sectionTitle2 {
+    fill: $ms-color-neutralPrimary;
+  }
+
+  #mermaid .sectionTitle3 {
+    fill: $ms-color-neutralPrimary;
+  }
+
+  #mermaid .sectionTitle {
+    text-anchor: start;
+    font-size: 11px;
+    text-height: 14px;
+  }
+
+  #mermaid .grid .tick {
+    stroke: $ms-color-neutralPrimary;
+    opacity: 0.3;
+    shape-rendering: crispEdges;
+  }
+
+  #mermaid .grid path {
+    stroke-width: 0;
+  }
+
+  #mermaid .today {
+    fill: none;
+    stroke: $ms-color-red;
+    stroke-width: 2px;
+  }
+
+  #mermaid .task {
+    stroke-width: 2;
+  }
+
+  #mermaid .taskText {
+    text-anchor: middle;
+    font-size: 11px;
+  }
+
+  #mermaid .taskTextOutsideRight {
+    fill: $ms-color-black;
+    text-anchor: start;
+    font-size: 11px;
+  }
+
+  #mermaid .taskTextOutsideLeft {
+    fill: $ms-color-black;
+    text-anchor: end;
+    font-size: 11px;
+  }
+
+  #mermaid .taskText0,
+  #mermaid .taskText1,
+  #mermaid .taskText2,
+  #mermaid .taskText3 {
+    fill: $ms-color-white;
+  }
+
+  #mermaid .task0,
+  #mermaid .task1,
+  #mermaid .task2,
+  #mermaid .task3 {
+    fill: #487e3a;
+    stroke: $ms-color-themePrimary;
+  }
+
+  #mermaid .taskTextOutside0,
+  #mermaid .taskTextOutside2 {
+    fill: $ms-color-black;
+  }
+
+  #mermaid .taskTextOutside1,
+  #mermaid .taskTextOutside3 {
+    fill: $ms-color-black;
+  }
+
+  #mermaid .active0,
+  #mermaid .active1,
+  #mermaid .active2,
+  #mermaid .active3 {
+    fill: $ms-color-themeLight;
+    stroke: $ms-color-themePrimary;
+  }
+
+  #mermaid .activeText0,
+  #mermaid .activeText1,
+  #mermaid .activeText2,
+  #mermaid .activeText3 {
+    fill: $ms-color-black !important;
+  }
+
+  #mermaid .done0,
+  #mermaid .done1,
+  #mermaid .done2,
+  #mermaid .done3 {
+    stroke: $ms-color-neutralPrimary;
+    fill: $ms-color-neutralLight;
+    stroke-width: 2;
+  }
+
+  #mermaid .doneText0,
+  #mermaid .doneText1,
+  #mermaid .doneText2,
+  #mermaid .doneText3 {
+    fill: $ms-color-black !important;
+  }
+
+  #mermaid .crit0,
+  #mermaid .crit1,
+  #mermaid .crit2,
+  #mermaid .crit3 {
+    stroke: #ff8888;
+    fill: $ms-color-red;
+    stroke-width: 2;
+  }
+
+  #mermaid .activeCrit0,
+  #mermaid .activeCrit1,
+  #mermaid .activeCrit2,
+  #mermaid .activeCrit3 {
+    stroke: #ff8888;
+    fill: $ms-color-themeLight;
+    stroke-width: 2;
+  }
+
+  #mermaid .doneCrit0,
+  #mermaid .doneCrit1,
+  #mermaid .doneCrit2,
+  #mermaid .doneCrit3 {
+    stroke: #ff8888;
+    fill: $ms-color-neutralLight;
+    stroke-width: 2;
+    cursor: pointer;
+    shape-rendering: crispEdges;
+  }
+
+  #mermaid .doneCritText0,
+  #mermaid .doneCritText1,
+  #mermaid .doneCritText2,
+  #mermaid .doneCritText3 {
+    fill: $ms-color-black !important;
+  }
+
+  #mermaid .activeCritText0,
+  #mermaid .activeCritText1,
+  #mermaid .activeCritText2,
+  #mermaid .activeCritText3 {
+    fill: $ms-color-black !important;
+  }
+
+  #mermaid .titleText {
+    text-anchor: middle;
+    font-size: 18px;
+    fill: $ms-color-black;
+  }
+
+  #mermaid g.classGroup text {
+    fill: $ms-color-themePrimary;
+    stroke: none;
+    font-family: "Segoe UI Web (West European)", Segoe UI, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue,
+      sans-serif;
+    font-size: 10px;
+  }
+
+  #mermaid g.classGroup rect {
+    fill: $ms-color-themeLight;
+    stroke: $ms-color-themePrimary;
+  }
+
+  #mermaid g.classGroup line {
+    stroke: $ms-color-themePrimary;
+    stroke-width: 1;
+  }
+
+  #mermaid .classLabel .box {
+    stroke: none;
+    stroke-width: 0;
+    fill: $ms-color-themeLight;
+    opacity: 0.5;
+  }
+
+  #mermaid .classLabel .label {
+    fill: $ms-color-themePrimary;
+    font-size: 10px;
+  }
+
+  #mermaid .relation {
+    stroke: $ms-color-themePrimary;
+    stroke-width: 1;
+    fill: none;
+  }
+
+  #mermaid #compositionStart {
+    fill: $ms-color-themePrimary;
+    stroke: $ms-color-themePrimary;
+    stroke-width: 1;
+  }
+
+  #mermaid #compositionEnd {
+    fill: $ms-color-themePrimary;
+    stroke: $ms-color-themePrimary;
+    stroke-width: 1;
+  }
+
+  #mermaid #aggregationStart {
+    fill: $ms-color-themeLight;
+    stroke: $ms-color-themePrimary;
+    stroke-width: 1;
+  }
+
+  #mermaid #aggregationEnd {
+    fill: $ms-color-themeLight;
+    stroke: $ms-color-themePrimary;
+    stroke-width: 1;
+  }
+
+  #mermaid #dependencyStart {
+    fill: $ms-color-themePrimary;
+    stroke: $ms-color-themePrimary;
+    stroke-width: 1;
+  }
+
+  #mermaid #dependencyEnd {
+    fill: $ms-color-themePrimary;
+    stroke: $ms-color-themePrimary;
+    stroke-width: 1;
+  }
+
+  #mermaid #extensionStart {
+    fill: $ms-color-themePrimary;
+    stroke: $ms-color-themePrimary;
+    stroke-width: 1;
+  }
+
+  #mermaid #extensionEnd {
+    fill: $ms-color-themePrimary;
+    stroke: $ms-color-themePrimary;
+    stroke-width: 1;
+  }
+
+  #mermaid .commit-id,
+  #mermaid .commit-msg,
+  #mermaid .branch-label {
+    fill: $ms-color-neutralLight;
+    color: $ms-color-neutralLight;
+  }
+
+  // #mermaid .node rect {
+  //   fill: $ms-color-infoBackground;
+  //   color: $ms-color-infoText;
+  //   stroke: $ms-color-info;
+  // }
+}

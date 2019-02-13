@@ -9,6 +9,11 @@ export interface IPropertyPaneMarkdownContentProps {
   label?: string;
 
   /**
+   * Optional CSS style to apply to markdown
+   */
+  className?: string;
+
+  /**
    * An UNIQUE key indicates the identity of this control
    */
   key: string;

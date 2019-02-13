@@ -60,15 +60,12 @@ export class EditorPanel extends React.Component<IEditorPanelProps, IEditorPanel
 
   public componentDidMount(): void {
     if (this.props.customMode !== undefined) {
-      console.log("Has custom mode");
       try {
         // execute the custom mode function
         this.props.customMode();
-        console.log("ran custom mode");
 
         // get a reference to ace
         const aceThingy: any = this._editor as any;
-        console.log("Got the editor", this._editor);
 
         // get a reference to brace
         var ace = require('brace') as any;

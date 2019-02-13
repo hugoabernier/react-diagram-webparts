@@ -2,10 +2,10 @@
 
 ## Summary
 
-This solution contains (or will contain) a collection of web parts that make it easy
+This solution contains a collection of web parts that make it easy
 to embed various types of diagrams in pages.
 
-![Sequence Diagram Web Part](./assets/SequenceWebPart.gif)
+![Diagram Web Parts](./assets/DiagramWebParts.gif)
 
 ### Flowchart
 
@@ -14,6 +14,14 @@ to embed various types of diagrams in pages.
 The Flowchart web part allows you to use simple text to create flowchart diagrams in a page.
 
 It uses the [js-flowchart](https://github.com/adrai/flowchart.js) syntax to quickly create diagrams.
+
+### Mermail diagram
+
+![Mermaid Web Part](./assets/MermaidWebPart.gif)
+
+The Mermaid diagram web part allows you to use simple text to create flowcharts, gantt charts, and sequence diagrams and control their appearance.
+
+It uses the [mermaidjs](https://mermaidjs.github.io/) syntax to create awesome diagrams.
 
 ### Sequence diagram
 
@@ -43,6 +51,7 @@ react-diagram-webparts | Hugo Bernier ([Tahoe Ninjas](http://tahoeninjas.blog), 
 Version|Date|Comments
 -------|----|--------
 1.0|Feb 8, 2019|Initial release
+1.1|Feb 12, 2019|Added Mermaid diagram web part. 
 
 ## Disclaimer
 
@@ -63,6 +72,7 @@ This Web Part illustrates the following concepts:
 
 * Using [react-sequence-diagram](https://github.com/zfanta/react-sequence-diagram) in a SPFx web part (React component based on [js-sequence-diagrams](https://bramp.github.io/js-sequence-diagrams/))
 * Using [react-simple-flowchart](https://github.com/alwinn1977/react-simple-flowchart) in a SPFx web part (React component based on [js-flowchart](https://github.com/adrai/flowchart.js))
+* Using [mermaid](https://github.com/knsv/mermaid) in a SPFx web part.
 * Converting a static SVG to a responsive SVG post-render
 * Improving accessibility on a SVG post-render
 * Creating a custom code editor property pane that allows custom code/syntax

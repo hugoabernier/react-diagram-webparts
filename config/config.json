@@ -17,6 +17,14 @@
           "manifest": "./src/webparts/flow/FlowWebPart.manifest.json"
         }
       ]
+    },
+    "mermaid-web-part-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/mermaidWebPart/MermaidWebPartWebPart.js",
+          "manifest": "./src/webparts/mermaidWebPart/MermaidWebPartWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
@@ -24,6 +32,7 @@
     "SequenceWebPartStrings": "lib/webparts/sequence/loc/{locale}.js",
     "FlowWebPartStrings": "lib/webparts/flow/loc/{locale}.js",
     "PropertyFieldAceEditorStrings": "lib/controls/propertyfieldaceeditor/loc/{locale}.js",
-    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js"
+    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js",
+    "MermaidWebPartWebPartStrings": "lib/webparts/mermaidWebPart/loc/{locale}.js"
   }
 }
