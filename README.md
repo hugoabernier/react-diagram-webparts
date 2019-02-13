@@ -15,7 +15,7 @@ The Flowchart web part allows you to use simple text to create flowchart diagram
 
 It uses the [js-flowchart](https://github.com/adrai/flowchart.js) syntax to quickly create diagrams.
 
-### Mermail diagram
+### Mermaid diagram
 
 ![Mermaid Web Part](./assets/MermaidWebPart.gif)
 
