@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
   "id": "39d299e0-e974-4801-b756-0b2a73c4271d",
-  "alias": "MermaidWebPartWebPart",
+  "alias": "MermaidWebPart",
   "componentType": "WebPart",
 
   "version": "*",

@@ -1,4 +1,4 @@
-declare interface IMermaidWebPartWebPartStrings {
+declare interface IMermaidWebPartStrings {
   ErrorMessageInvalidSyntax: string;
   ErrorMessageWithExpected: string;
   SyntaxRightOf: string;
@@ -15,7 +15,7 @@ declare interface IMermaidWebPartWebPartStrings {
   SampleDefaultMermaid: string;
 }
 
-declare module 'MermaidWebPartWebPartStrings' {
-  const strings: IMermaidWebPartWebPartStrings;
+declare module 'MermaidWebPartStrings' {
+  const strings: IMermaidWebPartStrings;
   export = strings;
 }

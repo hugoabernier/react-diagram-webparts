@@ -18,11 +18,11 @@
         }
       ]
     },
-    "mermaid-web-part-web-part": {
+    "mermaid-web-part": {
       "components": [
         {
-          "entrypoint": "./lib/webparts/mermaidWebPart/MermaidWebPartWebPart.js",
-          "manifest": "./src/webparts/mermaidWebPart/MermaidWebPartWebPart.manifest.json"
+          "entrypoint": "./lib/webparts/mermaid/MermaidWebPart.js",
+          "manifest": "./src/webparts/mermaid/MermaidWebPart.manifest.json"
         }
       ]
     }
@@ -33,6 +33,6 @@
     "FlowWebPartStrings": "lib/webparts/flow/loc/{locale}.js",
     "PropertyFieldAceEditorStrings": "lib/controls/propertyfieldaceeditor/loc/{locale}.js",
     "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js",
-    "MermaidWebPartWebPartStrings": "lib/webparts/mermaidWebPart/loc/{locale}.js"
+    "MermaidWebPartStrings": "lib/webparts/mermaid/loc/{locale}.js"
   }
 }

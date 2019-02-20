@@ -6,9 +6,9 @@ import {
   IPropertyPaneConfiguration,
 } from '@microsoft/sp-webpart-base';
 
-import * as strings from 'MermaidWebPartWebPartStrings';
-import MermaidWebPart from './components/MermaidWebPart';
-import { IMermaidWebPartProps } from './components/IMermaidWebPart.types';
+import * as strings from 'MermaidWebPartStrings';
+import Mermaid from './components/Mermaid';
+import { IMermaidProps } from './components/IMermaid.types';
 import { PropertyFieldAceEditor, Annotation } from '@controls/PropertyFieldAceEditor';
 import { PropertyPaneMarkdownContent } from '@controls/PropertyPaneMarkdownContent';
 import { IMarkdownProps } from 'markdown-to-jsx';
@@ -21,11 +21,11 @@ import 'brace/mode/asciidoc';
 import mermaid from 'mermaid';
 
 
-export interface IMermaidWebPartWebPartProps {
+export interface IMermaidWebPartProps {
   mermaidText: string;
 }
 
-export default class MermaidWebPartWebPart extends BaseClientSideWebPart<IMermaidWebPartWebPartProps> {
+export default class MermaidWebPart extends BaseClientSideWebPart<IMermaidWebPartProps> {
 
   protected onInit(): Promise<void> {
     return new Promise<void>((resolve, _reject) => {
@@ -39,8 +39,8 @@ export default class MermaidWebPartWebPart extends BaseClientSideWebPart<IMermai
   }
 
   public render(): void {
-    const element: React.ReactElement<IMermaidWebPartProps> = React.createElement(
-      MermaidWebPart,
+    const element: React.ReactElement<IMermaidProps> = React.createElement(
+      Mermaid,
       {
         mermaidText: this.properties.mermaidText
       }
@@ -129,13 +129,13 @@ export default class MermaidWebPartWebPart extends BaseClientSideWebPart<IMermai
       const lines: string[] = value.split(/\r?\n/);
       let index: number = 0;
       let found: boolean = false;
-      for (let valueLine of lines) {
+      lines.forEach((valueLine:string)=>{
         if (valueLine.indexOf(textAfterError) > -1) {
           found = true;
-          break;
         }
+
         index++;
-      }
+      });
 
       if (found) {
         if (error.hash.token === "NL") {
