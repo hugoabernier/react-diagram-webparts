@@ -74,7 +74,6 @@ export default class MermaidWebPart extends BaseClientSideWebPart<IMermaidWebPar
       },
     };
 
-
     return {
       pages: [
         {
