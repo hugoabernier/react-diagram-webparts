@@ -23,13 +23,9 @@ export default class Mermaid extends React.Component<IMermaidProps, IMermaidStat
         htmlLabels: false
       }
     });
-    console.log("Initialized");
-
   }
 
   public componentDidMount(): void {
-    console.log("Component did mount");
-
     this._renderMermaid();
   }
 
@@ -44,9 +40,6 @@ export default class Mermaid extends React.Component<IMermaidProps, IMermaidStat
       <div
         ref={(el: HTMLDivElement) => this._mermaidElem = el}
         className={styles.mermaidWebPart}>
-        {/* {this.state.diagram &&
-          <div className="mermaid" dangerouslySetInnerHTML={{ __html: this.state.diagram }}></div>
-        } */}
       </div>
     );
   }
@@ -54,12 +47,12 @@ export default class Mermaid extends React.Component<IMermaidProps, IMermaidStat
   private _renderMermaid = () => {
     const { mermaidText } = this.props;
 
+    // Make the mermaid unique by using the instance Id, otherwise they'll overlap
+    const mermaidId: string = `mermaid${this.props.instanceId}`;
+    console.log("InstanceId", mermaidId);
     if (mermaidText !== undefined && mermaidText !== "") {
-      //console.log("Has text", mermaidText);
-      mermaidAPI.render("mermaid", mermaidText, (html) => {
-        //console.log("Mermaid render", html);
+      mermaidAPI.render(mermaidId, mermaidText, (html: string) => {
         this._mermaidElem.innerHTML = html;
-        // this.setState({ diagram: html });
       }, this._mermaidElem
       );
     }

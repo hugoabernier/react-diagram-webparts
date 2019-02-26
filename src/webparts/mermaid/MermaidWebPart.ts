@@ -42,7 +42,8 @@ export default class MermaidWebPart extends BaseClientSideWebPart<IMermaidWebPar
     const element: React.ReactElement<IMermaidProps> = React.createElement(
       Mermaid,
       {
-        mermaidText: this.properties.mermaidText
+        mermaidText: this.properties.mermaidText,
+        instanceId: this.instanceId,
       }
     );
 
@@ -288,7 +289,7 @@ export default class MermaidWebPart extends BaseClientSideWebPart<IMermaidWebPar
               token: "keyword"
             },
             {
-              regex:"(^[\\s]*graph\\s*)((LR|TB|TD|RL|BT)?)",
+              regex:"(^[\\s]*graph\\s*)(LR|TB|TD|RL|BT)",
               token: ["keyword", "constant.language"]
             },
             {

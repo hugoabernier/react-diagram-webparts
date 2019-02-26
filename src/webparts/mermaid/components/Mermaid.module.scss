@@ -5,56 +5,56 @@
 }
 
 :global {
-  #mermaid .label {
+  svg .label {
     font-family: "Segoe UI Web (West European)", Segoe UI, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue,
       sans-serif;
     color: $ms-color-neutralPrimary;
   }
 
-  #mermaid text {
+  svg text {
     font-family: "Segoe UI Web (West European)", Segoe UI, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue,
       sans-serif !important;
     color: $ms-color-neutralPrimary;
   }
 
-  #mermaid .node rect,
-  #mermaid .node circle,
-  #mermaid .node ellipse,
-  #mermaid .node polygon {
+  svg .node rect,
+  svg .node circle,
+  svg .node ellipse,
+  svg .node polygon {
     fill: $ms-color-themeLight;
     stroke: $ms-color-themePrimary;
     stroke-width: 1px;
   }
 
-  #mermaid .node.clickable {
+  svg .node.clickable {
     cursor: pointer;
   }
 
-  #mermaid .arrowheadPath {
+  svg .arrowheadPath {
     fill: $ms-color-themeDark;
   }
 
-  #mermaid .edgePath .path {
+  svg .edgePath .path {
     stroke: $ms-color-themeDark;
     stroke-width: 1.5px;
   }
 
-  #mermaid .edgeLabel {
+  svg .edgeLabel {
     background-color: $ms-color-infoBackground;
     color: $ms-color-infoText;
   }
 
-  #mermaid .cluster rect {
+  svg .cluster rect {
     fill: $ms-color-themeLighter !important;
     stroke: $ms-color-themePrimary !important;
     stroke-width: 1px !important;
   }
 
-  #mermaid .cluster text {
+  svg .cluster text {
     fill: $ms-color-neutralPrimary;
   }
 
-  #mermaid div.mermaidTooltip {
+  svg div.mermaidTooltip {
     position: absolute;
     text-align: center;
     max-width: 200px;
@@ -69,74 +69,74 @@
     z-index: 100;
   }
 
-  #mermaid .actor {
+  svg .actor {
     stroke: $ms-color-themePrimary;
     fill: $ms-color-themeLight;
   }
 
-  #mermaid text.actor {
+  svg text.actor {
     fill: $ms-color-black;
     stroke: none;
   }
 
-  #mermaid .actor-line {
+  svg .actor-line {
     stroke: $ms-color-neutralPrimary;
   }
 
-  #mermaid .messageLine0 {
+  svg .messageLine0 {
     stroke-width: 1.5;
     stroke-dasharray: "2 2";
     stroke: $ms-color-neutralPrimary;
   }
 
-  #mermaid .messageLine1 {
+  svg .messageLine1 {
     stroke-width: 1.5;
     stroke-dasharray: "2 2";
     stroke: $ms-color-neutralPrimary;
   }
 
-  #mermaid #arrowhead {
+  svg #arrowhead {
     fill: $ms-color-neutralPrimary;
   }
 
-  #mermaid #crosshead path {
+  svg #crosshead path {
     fill: $ms-color-neutralPrimary !important;
     stroke: $ms-color-neutralPrimary !important;
   }
 
-  #mermaid .messageText {
+  svg .messageText {
     fill: $ms-color-neutralPrimary;
     stroke: none;
   }
 
-  #mermaid .labelBox {
+  svg .labelBox {
     stroke: $ms-color-themeDark;
     fill: $ms-color-themeLight;
   }
 
-  #mermaid .labelText {
+  svg .labelText {
     fill: $ms-color-black;
     stroke: none;
   }
 
-  #mermaid .loopText {
+  svg .loopText {
     fill: $ms-color-black;
     stroke: none;
   }
 
-  #mermaid .loopLine {
+  svg .loopLine {
     stroke-width: 2;
     stroke-dasharray: "2 2";
     stroke: $ms-color-themeDark;
   }
 
-  #mermaid .note {
+  svg .note {
     fill: #fff4ce; //$ms-color-warningBackground;
     color: $ms-color-warningText;
     stroke: $ms-color-warning;
   }
 
-  #mermaid .noteText {
+  svg .noteText {
     fill: $ms-color-black;
     stroke: none;
     font-family: "Segoe UI Web (West European)", Segoe UI, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue,
@@ -144,177 +144,177 @@
     font-size: 14px;
   }
 
-  #mermaid .activation0 {
+  svg .activation0 {
     fill: $ms-color-neutralLighter;
     stroke: $ms-color-neutralDark;
   }
 
-  #mermaid .activation1 {
+  svg .activation1 {
     fill: $ms-color-neutralLighter;
     stroke: $ms-color-neutralDark;
   }
 
-  #mermaid .activation2 {
+  svg .activation2 {
     fill: $ms-color-neutralLighter;
     stroke: $ms-color-neutralDark;
   }
 
-  #mermaid .section {
+  svg .section {
     stroke: none;
     opacity: 0.2;
   }
 
-  #mermaid .section0 {
+  svg .section0 {
     fill: $ms-color-themePrimary;
   }
 
-  #mermaid .section2 {
+  svg .section2 {
     fill: $ms-color-themePrimary;
   }
 
-  #mermaid .section1,
-  #mermaid .section3 {
+  svg .section1,
+  svg .section3 {
     fill: $ms-color-white;
     opacity: 0.2;
   }
 
-  #mermaid .sectionTitle0 {
+  svg .sectionTitle0 {
     fill: $ms-color-neutralPrimary;
   }
 
-  #mermaid .sectionTitle1 {
+  svg .sectionTitle1 {
     fill: $ms-color-neutralPrimary;
   }
 
-  #mermaid .sectionTitle2 {
+  svg .sectionTitle2 {
     fill: $ms-color-neutralPrimary;
   }
 
-  #mermaid .sectionTitle3 {
+  svg .sectionTitle3 {
     fill: $ms-color-neutralPrimary;
   }
 
-  #mermaid .sectionTitle {
+  svg .sectionTitle {
     text-anchor: start;
     font-size: 11px;
     text-height: 14px;
   }
 
-  #mermaid .grid .tick {
+  svg .grid .tick {
     stroke: $ms-color-neutralPrimary;
     opacity: 0.3;
     shape-rendering: crispEdges;
   }
 
-  #mermaid .grid path {
+  svg .grid path {
     stroke-width: 0;
   }
 
-  #mermaid .today {
+  svg .today {
     fill: none;
     stroke: $ms-color-red;
     stroke-width: 2px;
   }
 
-  #mermaid .task {
+  svg .task {
     stroke-width: 2;
   }
 
-  #mermaid .taskText {
+  svg .taskText {
     text-anchor: middle;
     font-size: 11px;
   }
 
-  #mermaid .taskTextOutsideRight {
+  svg .taskTextOutsideRight {
     fill: $ms-color-black;
     text-anchor: start;
     font-size: 11px;
   }
 
-  #mermaid .taskTextOutsideLeft {
+  svg .taskTextOutsideLeft {
     fill: $ms-color-black;
     text-anchor: end;
     font-size: 11px;
   }
 
-  #mermaid .taskText0,
-  #mermaid .taskText1,
-  #mermaid .taskText2,
-  #mermaid .taskText3 {
+  svg .taskText0,
+  svg .taskText1,
+  svg .taskText2,
+  svg .taskText3 {
     fill: $ms-color-white;
   }
 
-  #mermaid .task0,
-  #mermaid .task1,
-  #mermaid .task2,
-  #mermaid .task3 {
+  svg .task0,
+  svg .task1,
+  svg .task2,
+  svg .task3 {
     fill: #487e3a;
     stroke: $ms-color-themePrimary;
   }
 
-  #mermaid .taskTextOutside0,
-  #mermaid .taskTextOutside2 {
+  svg .taskTextOutside0,
+  svg .taskTextOutside2 {
     fill: $ms-color-black;
   }
 
-  #mermaid .taskTextOutside1,
-  #mermaid .taskTextOutside3 {
+  svg .taskTextOutside1,
+  svg .taskTextOutside3 {
     fill: $ms-color-black;
   }
 
-  #mermaid .active0,
-  #mermaid .active1,
-  #mermaid .active2,
-  #mermaid .active3 {
+  svg .active0,
+  svg .active1,
+  svg .active2,
+  svg .active3 {
     fill: $ms-color-themeLight;
     stroke: $ms-color-themePrimary;
   }
 
-  #mermaid .activeText0,
-  #mermaid .activeText1,
-  #mermaid .activeText2,
-  #mermaid .activeText3 {
+  svg .activeText0,
+  svg .activeText1,
+  svg .activeText2,
+  svg .activeText3 {
     fill: $ms-color-black !important;
   }
 
-  #mermaid .done0,
-  #mermaid .done1,
-  #mermaid .done2,
-  #mermaid .done3 {
+  svg .done0,
+  svg .done1,
+  svg .done2,
+  svg .done3 {
     stroke: $ms-color-neutralPrimary;
     fill: $ms-color-neutralLight;
     stroke-width: 2;
   }
 
-  #mermaid .doneText0,
-  #mermaid .doneText1,
-  #mermaid .doneText2,
-  #mermaid .doneText3 {
+  svg .doneText0,
+  svg .doneText1,
+  svg .doneText2,
+  svg .doneText3 {
     fill: $ms-color-black !important;
   }
 
-  #mermaid .crit0,
-  #mermaid .crit1,
-  #mermaid .crit2,
-  #mermaid .crit3 {
+  svg .crit0,
+  svg .crit1,
+  svg .crit2,
+  svg .crit3 {
     stroke: #ff8888;
     fill: $ms-color-red;
     stroke-width: 2;
   }
 
-  #mermaid .activeCrit0,
-  #mermaid .activeCrit1,
-  #mermaid .activeCrit2,
-  #mermaid .activeCrit3 {
+  svg .activeCrit0,
+  svg .activeCrit1,
+  svg .activeCrit2,
+  svg .activeCrit3 {
     stroke: #ff8888;
     fill: $ms-color-themeLight;
     stroke-width: 2;
   }
 
-  #mermaid .doneCrit0,
-  #mermaid .doneCrit1,
-  #mermaid .doneCrit2,
-  #mermaid .doneCrit3 {
+  svg .doneCrit0,
+  svg .doneCrit1,
+  svg .doneCrit2,
+  svg .doneCrit3 {
     stroke: #ff8888;
     fill: $ms-color-neutralLight;
     stroke-width: 2;
@@ -322,27 +322,27 @@
     shape-rendering: crispEdges;
   }
 
-  #mermaid .doneCritText0,
-  #mermaid .doneCritText1,
-  #mermaid .doneCritText2,
-  #mermaid .doneCritText3 {
+  svg .doneCritText0,
+  svg .doneCritText1,
+  svg .doneCritText2,
+  svg .doneCritText3 {
     fill: $ms-color-black !important;
   }
 
-  #mermaid .activeCritText0,
-  #mermaid .activeCritText1,
-  #mermaid .activeCritText2,
-  #mermaid .activeCritText3 {
+  svg .activeCritText0,
+  svg .activeCritText1,
+  svg .activeCritText2,
+  svg .activeCritText3 {
     fill: $ms-color-black !important;
   }
 
-  #mermaid .titleText {
+  svg .titleText {
     text-anchor: middle;
     font-size: 18px;
     fill: $ms-color-black;
   }
 
-  #mermaid g.classGroup text {
+  svg g.classGroup text {
     fill: $ms-color-themePrimary;
     stroke: none;
     font-family: "Segoe UI Web (West European)", Segoe UI, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue,
@@ -350,90 +350,90 @@
     font-size: 10px;
   }
 
-  #mermaid g.classGroup rect {
+  svg g.classGroup rect {
     fill: $ms-color-themeLight;
     stroke: $ms-color-themePrimary;
   }
 
-  #mermaid g.classGroup line {
+  svg g.classGroup line {
     stroke: $ms-color-themePrimary;
     stroke-width: 1;
   }
 
-  #mermaid .classLabel .box {
+  svg .classLabel .box {
     stroke: none;
     stroke-width: 0;
     fill: $ms-color-themeLight;
     opacity: 0.5;
   }
 
-  #mermaid .classLabel .label {
+  svg .classLabel .label {
     fill: $ms-color-themePrimary;
     font-size: 10px;
   }
 
-  #mermaid .relation {
+  svg .relation {
     stroke: $ms-color-themePrimary;
     stroke-width: 1;
     fill: none;
   }
 
-  #mermaid #compositionStart {
+  svg #compositionStart {
     fill: $ms-color-themePrimary;
     stroke: $ms-color-themePrimary;
     stroke-width: 1;
   }
 
-  #mermaid #compositionEnd {
+  svg #compositionEnd {
     fill: $ms-color-themePrimary;
     stroke: $ms-color-themePrimary;
     stroke-width: 1;
   }
 
-  #mermaid #aggregationStart {
+  svg #aggregationStart {
     fill: $ms-color-themeLight;
     stroke: $ms-color-themePrimary;
     stroke-width: 1;
   }
 
-  #mermaid #aggregationEnd {
+  svg #aggregationEnd {
     fill: $ms-color-themeLight;
     stroke: $ms-color-themePrimary;
     stroke-width: 1;
   }
 
-  #mermaid #dependencyStart {
+  svg #dependencyStart {
     fill: $ms-color-themePrimary;
     stroke: $ms-color-themePrimary;
     stroke-width: 1;
   }
 
-  #mermaid #dependencyEnd {
+  svg #dependencyEnd {
     fill: $ms-color-themePrimary;
     stroke: $ms-color-themePrimary;
     stroke-width: 1;
   }
 
-  #mermaid #extensionStart {
+  svg #extensionStart {
     fill: $ms-color-themePrimary;
     stroke: $ms-color-themePrimary;
     stroke-width: 1;
   }
 
-  #mermaid #extensionEnd {
+  svg #extensionEnd {
     fill: $ms-color-themePrimary;
     stroke: $ms-color-themePrimary;
     stroke-width: 1;
   }
 
-  #mermaid .commit-id,
-  #mermaid .commit-msg,
-  #mermaid .branch-label {
+  svg .commit-id,
+  svg .commit-msg,
+  svg .branch-label {
     fill: $ms-color-neutralLight;
     color: $ms-color-neutralLight;
   }
 
-  // #mermaid .node rect {
+  // svg .node rect {
   //   fill: $ms-color-infoBackground;
   //   color: $ms-color-infoText;
   //   stroke: $ms-color-info;
