@@ -21,14 +21,12 @@ export class FlowParser implements IParser {
   private _symbols: any;
 
   public verifySyntax(value: string): IParserError[] {
-    //console.log("Verifying syntax", value);
     const parserErrors: IParserError[] = [];
     this._start = undefined;
     this._symbols = [];
     this._hasStart = false;
 
     const lines: string[] = this._getLines(value);
-    //console.log("Lines", lines);
 
     lines.forEach((line: string, index: number) => {
       const result: IParserError = this._parseLine(line, index);
@@ -37,7 +35,6 @@ export class FlowParser implements IParser {
       }
     });
 
-    console.log("Parsing completed", lines, parserErrors);
     return parserErrors;
   }
 
@@ -71,7 +68,6 @@ export class FlowParser implements IParser {
 
   private _parseLine = (line: string, index: number): IParserError => {
     if (line.indexOf('=>') >= 0) {
-      //console.log("Line is definition", line);
       try {
         return this._parseDefinition(line, index);
       } catch (error) {
@@ -79,7 +75,6 @@ export class FlowParser implements IParser {
       }
 
     } else if (line.indexOf('->') >= 0) {
-      //console.log("Line is flow", line);
       try {
         return this._parseFlow(line, index);
       } catch (error) {
@@ -87,7 +82,6 @@ export class FlowParser implements IParser {
       }
 
     } else if (line.indexOf('@>') >= 0) {
-      //console.log("Line is style", line);
       try {
         return this._parseLineStyle(line, index);
       } catch (error) {
@@ -122,11 +116,9 @@ export class FlowParser implements IParser {
       case 'condition':
       case 'parallel':
         // we're good
-        //console.log("Recognized symbol", symbolType);
         break;
 
       default:
-        //console.log("Unknown symbol", symbolType);
         return {
           row: index,
           column: 0,
@@ -137,7 +129,6 @@ export class FlowParser implements IParser {
     try {
       //parse parameters
       const params = parts[0].match(/\((.*)\)/);
-      //console.log("Parse parameters",params);
       if (params && params.length > 1) {
         const entries = params[1].split(',');
         for (var i = 0; i < entries.length; i++) {
@@ -147,8 +138,6 @@ export class FlowParser implements IParser {
           }
         }
       }
-      //console.log("Params", symbol.params);
-
     } catch (error) {
       console.log("Error parsing parameters", error);
     }
@@ -156,7 +145,6 @@ export class FlowParser implements IParser {
     let sub;
 
     try {
-      //console.log("Parse labels");
       if (parts[1].indexOf(':') >= 0) {
         sub = parts[1].split(':');
         symbol.text = sub[1].trim();
@@ -173,7 +161,6 @@ export class FlowParser implements IParser {
     }
 
     try {
-      //console.log("Parse links");
       if (symbol.text && symbol.text.indexOf(':>') >= 0) {
         sub = symbol.text.split(':>');
         symbol.text = sub.shift();
@@ -216,7 +203,6 @@ export class FlowParser implements IParser {
       /* end of flowstate support */
       if (this._symbols[symbol.key] === undefined) {
         // Symbol doesn't exist
-        //console.log("Adding symbol", symbol.key);
         this._symbols[symbol.key] = symbol;
 
         if (symbol.symbolType === 'start') {
@@ -262,7 +248,6 @@ export class FlowParser implements IParser {
         };
       }
       const symbVal = this._getSymbValue(flowSymb);
-      console.log("Symbval", symbVal);
 
 
 
@@ -275,7 +260,6 @@ export class FlowParser implements IParser {
       const realSymb = this._getSymbol(flowSymb);
 
       let next = this._getNextPath(flowSymb);
-      console.log("next", next);
       if (next === undefined) {
         const key:string = this._getSymbolKey(flowSymb);
         const col: number = line.indexOf(key);
@@ -307,9 +291,7 @@ export class FlowParser implements IParser {
 
       if (i + 1 < lenS) {
         var nextSymb = flowSymbols[i + 1];
-        //console.log("NextSymb", nextSymb, next);
         const getSymbol = this._getSymbol(nextSymb);
-        //console.log("GetSymbol", getSymbol);
         realSymb[next] = getSymbol;
         realSymb['direction_' + next] = direction;
         direction = null;

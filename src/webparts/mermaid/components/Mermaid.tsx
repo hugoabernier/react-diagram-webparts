@@ -58,7 +58,6 @@ export default class Mermaid extends React.Component<IMermaidProps, IMermaidStat
 
     // Make the mermaid unique by using the instance Id, otherwise they'll overlap
     const mermaidId: string = `mermaid${this.props.instanceId}`;
-    console.log("InstanceId", mermaidId);
     if (mermaidText !== undefined && mermaidText !== "") {
       mermaidAPI.render(mermaidId, mermaidText, (html: string) => {
         this._mermaidElem.innerHTML = html;
