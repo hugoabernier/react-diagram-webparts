@@ -9,11 +9,11 @@ define([], function() {
     SyntaxNewLine: "new line",
     SyntaxSpace: "space",
     MermaidSyntaxHelp: `## Mermaid syntax
-    To learn more about **mermaid** syntax, please visit <a href='https://mermaidjs.github.io/' target='_blank'>mermaidjs</a>.
+To learn more about **mermaid** syntax, please visit <a href='https://mermaidjs.github.io/' target='_blank'></a>.
 
-    ## Credits
+## Credits
 
-    [Knut Sveidqvist](https://github.com/knsv) for the awesome [mermaid](https://github.com/knsv/mermaid)`,
+[Knut Sveidqvist](https://github.com/knsv) for the awesome [mermaid](https://github.com/knsv/mermaid)`,
     SyntaxHelpGroupName: "Syntax help",
     PropertyPaneDescription: "Use this web part to easily add flowcharts, gantt charts, and sequence diagrams using simple text.",
     BasicGroupName: "Mermaid",
