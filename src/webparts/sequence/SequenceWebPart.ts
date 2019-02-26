@@ -11,7 +11,7 @@ import {
 
 import * as strings from 'SequenceWebPartStrings';
 import Sequence from './components/Sequence';
-import { ISequenceProps } from './components/ISequenceProps';
+import { ISequenceProps } from './components/ISequence.types';
 import { PropertyFieldAceEditor, Annotation } from '@controls/PropertyFieldAceEditor';
 
 // Import a Mode (language) for Ace

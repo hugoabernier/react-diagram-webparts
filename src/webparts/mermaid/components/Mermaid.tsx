@@ -2,6 +2,9 @@ import * as React from 'react';
 import styles from './Mermaid.module.scss';
 import { IMermaidProps, IMermaidState } from './IMermaid.types';
 
+// PnP controls for web part title
+import { WebPartTitle } from "@pnp/spfx-controls-react/lib/WebPartTitle";
+
 import mermaid, { mermaidAPI } from 'mermaid';
 
 export default class Mermaid extends React.Component<IMermaidProps, IMermaidState> {
@@ -37,9 +40,15 @@ export default class Mermaid extends React.Component<IMermaidProps, IMermaidStat
 
   public render(): React.ReactElement<IMermaidProps> {
     return (
-      <div
-        ref={(el: HTMLDivElement) => this._mermaidElem = el}
-        className={styles.mermaidWebPart}>
+      <div className={styles.mermaid}>
+        <WebPartTitle displayMode={this.props.displayMode}
+          title={this.props.title}
+          updateProperty={this.props.onUpdateTitle} />
+
+        <div
+          ref={(el: HTMLDivElement) => this._mermaidElem = el}
+          className={styles.mermaidContainer}>
+        </div>
       </div>
     );
   }

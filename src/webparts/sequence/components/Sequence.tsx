@@ -4,7 +4,7 @@ import * as React from 'react';
 import styles from './Sequence.module.scss';
 
 // Custom props
-import { ISequenceProps } from './ISequenceProps';
+import { ISequenceProps } from './ISequence.types';
 
 // Used to render sequence diagrams
 import SequenceDiagram from 'react-sequence-diagram';

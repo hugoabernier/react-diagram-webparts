@@ -23,6 +23,7 @@ import mermaid from 'mermaid';
 
 export interface IMermaidWebPartProps {
   mermaidText: string;
+  title: string;
 }
 
 export default class MermaidWebPart extends BaseClientSideWebPart<IMermaidWebPartProps> {
@@ -44,6 +45,12 @@ export default class MermaidWebPart extends BaseClientSideWebPart<IMermaidWebPar
       {
         mermaidText: this.properties.mermaidText,
         instanceId: this.instanceId,
+        title: this.properties.title,
+        displayMode: this.displayMode,
+        onUpdateTitle: (value: string) => {
+          // when title is changed, store the new title
+          this.properties.title = value;
+        }
       }
     );
 
