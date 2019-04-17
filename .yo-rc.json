@@ -12,7 +12,7 @@
     "framework": "react",
     "isCreatingSolution": false,
     "environment": "spo",
-    "version": "1.7.1",
+    "version": "1.8.0",
     "libraryName": "react-diagram-webparts",
     "libraryId": "8d8fcdd0-b1a7-4e42-9bf3-e18aad2a6a9f",
     "packageManager": "npm",

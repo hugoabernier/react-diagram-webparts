@@ -29,6 +29,21 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - (List vulnerabilities that were fixed in this version)
 
+## [1.2.0] - 2019-04-16
+
+### Added
+
+- HTML Labels toggle for Mermaid diagrams
+
+### Changed
+
+- Upgraded to SPFx 1.8
+
+### Fixed
+
+- Fixed alignment for HTML Labels
+
+
 ## [1.1.0] - 2019-02-12
 
 ### Added

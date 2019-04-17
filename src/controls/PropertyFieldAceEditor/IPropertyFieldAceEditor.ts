@@ -1,7 +1,4 @@
-import {
-  IPropertyPaneCustomFieldProps,
-} from '@microsoft/sp-webpart-base';
-
+import { IPropertyPaneCustomFieldProps } from "@microsoft/sp-property-pane";
 import { AceOptions } from 'react-ace';
 
 export interface IPropertyFieldAceEditorProps {
@@ -20,7 +17,7 @@ export interface IPropertyFieldAceEditorProps {
   deferredValidationTime?: number;
 
   defaultValue?: string;
-  
+
   /**
   * Specify if the control needs to be disabled
   */

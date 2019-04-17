@@ -8,6 +8,23 @@
   text-align: center;
 }
 
+.mermaid svg foreignObject {
+  padding-top: 9px;
+
+  div {
+    a, a:link, a:visited {
+      color: "[theme:link]";
+      text-decoration:none;
+    }
+
+    a:hover {
+      color: "[theme:linkHovered]";
+      text-decoration:underline;
+    }
+  }
+
+}
+
 :global {
   svg .label {
     font-family: "Segoe UI Web (West European)", Segoe UI, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue,
@@ -19,6 +36,8 @@
     font-family: "Segoe UI Web (West European)", Segoe UI, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue,
       sans-serif !important;
     color: $ms-color-neutralPrimary;
+
+
   }
 
   svg .node rect,

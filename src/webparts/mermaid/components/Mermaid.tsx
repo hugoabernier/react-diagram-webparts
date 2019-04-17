@@ -18,14 +18,6 @@ export default class Mermaid extends React.Component<IMermaidProps, IMermaidStat
     this.state = {
       diagram: undefined
     };
-
-    mermaid.initialize({
-      theme: null,
-      themeCSS: '',
-      flowchart: {
-        htmlLabels: false
-      }
-    });
   }
 
   public componentDidMount(): void {
@@ -34,6 +26,11 @@ export default class Mermaid extends React.Component<IMermaidProps, IMermaidStat
 
   public componentDidUpdate(prevProps: IMermaidProps, prevState: IMermaidState): void {
     if (prevProps.mermaidText !== this.props.mermaidText) {
+      this._renderMermaid();
+    }
+
+    if (prevProps.htmlLabels !== this.props.htmlLabels) {
+      console.log("Updating HTML labels", mermaid.htmlLabels);
       this._renderMermaid();
     }
   }
@@ -55,6 +52,14 @@ export default class Mermaid extends React.Component<IMermaidProps, IMermaidStat
 
   private _renderMermaid = () => {
     const { mermaidText } = this.props;
+
+    mermaid.initialize({
+      theme: null,
+      themeCSS: '',
+      flowchart: {
+        htmlLabels: this.props.htmlLabels
+      }
+    });
 
     // Make the mermaid unique by using the instance Id, otherwise they'll overlap
     const mermaidId: string = `mermaid${this.props.instanceId}`;

@@ -1,13 +1,8 @@
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 import { Version } from '@microsoft/sp-core-library';
-import {
-  BaseClientSideWebPart,
-  IPropertyPaneConfiguration,
-  PropertyPaneDropdown,
-  IWebPartPropertiesMetadata
-
-} from '@microsoft/sp-webpart-base';
+import { BaseClientSideWebPart, IWebPartPropertiesMetadata } from "@microsoft/sp-webpart-base";
+import { IPropertyPaneConfiguration, PropertyPaneDropdown } from "@microsoft/sp-property-pane";
 
 import * as strings from 'SequenceWebPartStrings';
 import Sequence from './components/Sequence';
