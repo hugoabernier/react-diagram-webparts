@@ -1,13 +1,10 @@
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
-import {
-  IPropertyPaneField,
-  PropertyPaneFieldType
-} from '@microsoft/sp-webpart-base';
 
 import { IPropertyPaneMarkdownContentProps, IPropertyPaneMarkdownContentPropsInternal } from "./IPropertyPaneMarkdownContent";
 import { IPropertyPaneMarkdownContentHostProps } from './IPropertyPaneMarkdownContentHost';
 import PropertyPaneMarkdownContentHost from './PropertyPaneMarkdownContentHost';
+import { IPropertyPaneField, PropertyPaneFieldType } from "@microsoft/sp-property-pane";
 
 class PropertyPaneMarkdownContentBuilder implements IPropertyPaneField<IPropertyPaneMarkdownContentProps> {
 	//Properties defined by IPropertyPaneField

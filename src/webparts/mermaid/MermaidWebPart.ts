@@ -1,11 +1,8 @@
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 import { Version } from '@microsoft/sp-core-library';
-import {
-  BaseClientSideWebPart,
-  IPropertyPaneConfiguration,
-} from '@microsoft/sp-webpart-base';
-
+import { BaseClientSideWebPart, PropertyPaneToggle } from "@microsoft/sp-webpart-base";
+import { IPropertyPaneConfiguration } from "@microsoft/sp-property-pane";
 import * as strings from 'MermaidWebPartStrings';
 import Mermaid from './components/Mermaid';
 import { IMermaidProps } from './components/IMermaid.types';
@@ -24,6 +21,7 @@ import mermaid from 'mermaid';
 export interface IMermaidWebPartProps {
   mermaidText: string;
   title: string;
+  htmlLabels: boolean;
 }
 
 export default class MermaidWebPart extends BaseClientSideWebPart<IMermaidWebPartProps> {
@@ -47,6 +45,7 @@ export default class MermaidWebPart extends BaseClientSideWebPart<IMermaidWebPar
         instanceId: this.instanceId,
         title: this.properties.title,
         displayMode: this.displayMode,
+        htmlLabels: this.properties.htmlLabels,
         onUpdateTitle: (value: string) => {
           // when title is changed, store the new title
           this.properties.title = value;
@@ -104,6 +103,13 @@ export default class MermaidWebPart extends BaseClientSideWebPart<IMermaidWebPar
                   customMode: this._setCustomMode,
                   onValidate: (value: string) => this._handleValidation(value),
                   onPropertyChange: (_propertyPath: string, _oldValue: string, value: string) => this._handleSave(value),
+                }),
+                PropertyPaneToggle('htmlLabels', {
+                  key: "htmlLabels",
+                  label: "HTML Labels",
+                  onText: "On",
+                  offText: "Off",
+                  checked: this.properties.htmlLabels === true
                 })
               ]
             },

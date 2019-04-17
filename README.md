@@ -51,7 +51,8 @@ react-diagram-webparts | Hugo Bernier ([Tahoe Ninjas](http://tahoeninjas.blog), 
 Version|Date|Comments
 -------|----|--------
 1.0|Feb 8, 2019|Initial release
-1.1|Feb 12, 2019|Added Mermaid diagram web part. 
+1.1|Feb 12, 2019|Added Mermaid diagram web part.
+1.2|Apr 16, 2019|Upgraded to SPFx 1.8
 
 ## Disclaimer
 
