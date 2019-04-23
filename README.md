@@ -33,7 +33,7 @@ It uses the [js-sequence-diagrams](https://bramp.github.io/js-sequence-diagrams/
 
 ## Used SharePoint Framework Version
 
-![SPFx v1.7.1](https://img.shields.io/badge/SPFx-1.7.1-green.svg)
+![SPFx v1.8.1](https://img.shields.io/badge/SPFx-1.8.1-green.svg)
 
 ## Applies to
 
@@ -53,6 +53,7 @@ Version|Date|Comments
 1.0|Feb 8, 2019|Initial release
 1.1|Feb 12, 2019|Added Mermaid diagram web part.
 1.2|Apr 16, 2019|Upgraded to SPFx 1.8
+1.3|Apr 22, 2019|Upgraded to SPFx 1.8.1
 
 ## Disclaimer
 

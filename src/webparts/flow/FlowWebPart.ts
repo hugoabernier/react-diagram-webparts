@@ -71,10 +71,6 @@ export default class FlowWebPart extends BaseClientSideWebPart<IFlowWebPartProps
     ReactDom.unmountComponentAtNode(this.domElement);
   }
 
-  protected get dataVersion(): Version {
-    return Version.parse('1.0');
-  }
-
   protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
     const mdProps: IMarkdownProps = {
       forceBlock: true,

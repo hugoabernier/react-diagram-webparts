@@ -122,7 +122,7 @@ export class FlowParser implements IParser {
         return {
           row: index,
           column: 0,
-          error: "Wrong symbol type. Expecting 'start', 'end', 'operation', 'inputoutput', 'subroutine', 'condition', or 'parallel'"
+          error: strings.FlowParserErrorWrongSymbol
         };
     }
 
@@ -152,7 +152,7 @@ export class FlowParser implements IParser {
           return {
             row: index,
             column: 0,
-            error: "Label cannot be blank"
+            error: strings.FlowParserErrorLabelCannotBeBlank
           };
         }
       }
@@ -206,13 +206,13 @@ export class FlowParser implements IParser {
         this._symbols[symbol.key] = symbol;
 
         if (symbol.symbolType === 'start') {
-          if  (!this._hasStart) {
+          if (!this._hasStart) {
             this._hasStart = true;
           } else {
             return {
               row: index,
               column: 0,
-              error: "Only one 'start' symbol allowed."
+              error: strings.FlowParserErrorOnlyOneStartAllowed
             };
           }
         }
@@ -222,7 +222,7 @@ export class FlowParser implements IParser {
         return {
           row: index,
           column: 0,
-          error: `Duplicate symbol '${symbol.key}'`
+          error: strings.FlowParserErrorDuplicateSymbol.replace('{0}', symbol.key)
         };
       }
     } catch (error) {
@@ -239,12 +239,12 @@ export class FlowParser implements IParser {
       let flowSymb = flowSymbols[i];
       const symb = this._getSymbol(flowSymb);
       if (symb === undefined) {
-        const key:string = this._getSymbolKey(flowSymb);
+        const key: string = this._getSymbolKey(flowSymb);
         const col: number = line.indexOf(key);
         return {
           row: index,
           column: col,
-          error: `Symbol '${key}' does not exist`
+          error: strings.FlowParserErrorSymbolDoesNotExist.replace('{0}', key) //`Symbol '${key}' does not exist`
         };
       }
       const symbVal = this._getSymbValue(flowSymb);
@@ -261,12 +261,12 @@ export class FlowParser implements IParser {
 
       let next = this._getNextPath(flowSymb);
       if (next === undefined) {
-        const key:string = this._getSymbolKey(flowSymb);
+        const key: string = this._getSymbolKey(flowSymb);
         const col: number = line.indexOf(key);
         return {
           row: index,
           column: col,
-          error: `Symbol '${key}' does not exist`
+          error: strings.FlowParserErrorSymbolDoesNotExist.replace('{0}', key) //`Symbol '${key}' does not exist`
         };
       }
 
@@ -277,11 +277,24 @@ export class FlowParser implements IParser {
         direction = condOpt[1].trim();
       }
 
-      if (direction !== undefined && (direction !== 'left' && direction !== 'right' && direction !== 'top' && direction !== 'bottom' )) {
+      // Account for align-next
+      if (next.indexOf("align-next") >= 0) {
+        var alignOpt = next.split('=');
+        var align = alignOpt[1] && alignOpt[1].trim();
+        if (align !== undefined && align !== 'no' && align !== 'yes') {
+          return {
+            row: index,
+            column: 0,
+            error: strings.FlowParserErrorInvalidNextDirective
+          };
+        }
+      } else if (direction !== undefined &&
+        (direction !== 'left' && direction !== 'right' && direction !== 'top' && direction !== 'bottom')
+      ) {
         return {
           row: index,
           column: 0,
-          error: "Invalid direction. Expecting 'top', 'bottom', 'left', or 'right'"
+          error: strings.FlowParserErrorInvalidDirection
         };
       }
 
