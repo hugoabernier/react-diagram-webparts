@@ -60,10 +60,6 @@ export default class MermaidWebPart extends BaseClientSideWebPart<IMermaidWebPar
     ReactDom.unmountComponentAtNode(this.domElement);
   }
 
-  protected get dataVersion(): Version {
-    return Version.parse('1.0');
-  }
-
   protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
     const mdProps: IMarkdownProps = {
       forceBlock: true,

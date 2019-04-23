@@ -3,7 +3,7 @@
   "solution": {
     "name": "react-diagram-webparts-client-side-solution",
     "id": "8d8fcdd0-b1a7-4e42-9bf3-e18aad2a6a9f",
-    "version": "1.2.0.0",
+    "version": "1.3.0.0",
     "includeClientSideAssets": true
   },
   "paths": {

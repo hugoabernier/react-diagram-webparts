@@ -29,6 +29,19 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - (List vulnerabilities that were fixed in this version)
 
+## [1.3.0] - 2019-04-22
+
+### Changed
+
+- Upgraded to SPFx 1.8.1
+- Fixed issue with flowchart `align-next=no` not being recognized
+- Localized flowchart parser errors. I should be ashamed of myself.
+
+### Security
+
+- Fixed 2 packages with detected vulnerabilities
+
+
 ## [1.2.0] - 2019-04-16
 
 ### Added

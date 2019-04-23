@@ -1,5 +1,12 @@
 define([], function() {
   return {
+    FlowParserErrorSymbolDoesNotExist: "Symbol '{0}' does not exist",
+    FlowParserErrorDuplicateSymbol: "Duplicate symbol '{0}'",
+    FlowParserErrorWrongSymbol: "Wrong symbol type. Expecting 'start', 'end', 'operation', 'inputoutput', 'subroutine', 'condition', or 'parallel'",
+    FlowParserErrorLabelCannotBeBlank: "Label cannot be blank",
+    FlowParserErrorOnlyOneStartAllowed: "Only one 'start' symbol allowed.",
+    FlowParserErrorInvalidDirection: "Invalid direction. Expecting 'top', 'bottom', 'left', 'right', or 'align-next:[yes/no]'",
+    FlowParserErrorInvalidNextDirective: "Invalid align-next directive. Expecting 'yes' or 'no'",
     ConfigurationSyntaxHelpGroup: "Configuration syntax help",
     ConfigurationSyntaxHelp: `## Chart styles
 
